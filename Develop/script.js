@@ -15,7 +15,7 @@ let characterOptions = []
 
 let lowercase = ["a", "b", "c",];
 let uppercase = ["A", "B", "C",];
-let special = ["!", "#", "@",];
+let special = ["!", "@", "#",];
 
 if (includeSpecial) {
   characterOptions = characterOptions.concat(special);
@@ -32,11 +32,10 @@ if (includeLowercase) {
 let res 
 
   console.log(passwordLength);
-  
 
-  for (i=0; i<password.Lenght; i++) {
-    let randomIndex = Math.floor(Match.random() * alphabet.length)  
-    res += alphabet[randomIndex]
+  for (i=0; i < password.Lenght; i++) {
+      let randomIndex = Math.floor(Match.random() * alphabet.length)  
+  res += alphabet[randomIndex]
   }
   return res
 }
@@ -69,6 +68,3 @@ function writePassword() {
 
   
 
-
-
-    
