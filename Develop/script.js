@@ -10,13 +10,15 @@ function generatePassword(
     includeUppercase
 ) {
 
-  
+// Write an array string  
 let characterOptions = []
 
+let numeric = ["1", "2", "3",];
+let special = ["!", "@", "#",];
 let lowercase = ["a", "b", "c",];
 let uppercase = ["A", "B", "C",];
-let special = ["!", "@", "#",];
 
+// Evaluate function
 if (includeSpecial) {
   characterOptions = characterOptions.concat(special);
 }
@@ -33,9 +35,10 @@ let res
 
   console.log(passwordLength);
 
-  for (i=0; i < password.Lenght; i++) {
-      let randomIndex = Math.floor(Match.random() * alphabet.length)  
-  res += alphabet[randomIndex]
+// Loop the random password
+  for (i=0; i < passwordLength; i++) {
+      let randomIndex = Math.floor(Math.random() * characterOptions.length)  
+  res += characterOptions[randomIndex]
   }
   return res
 }
@@ -62,6 +65,8 @@ function writePassword() {
     passwordText.value = password;
   
   }
+
+
   
   // Add event listener to generate button
   generateBtn.addEventListener("click", writePassword);
