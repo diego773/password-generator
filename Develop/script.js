@@ -13,10 +13,11 @@ function generatePassword(
 // Write an array string  
 let characterOptions = []
 
-let numeric = ["1", "2", "3",];
-let special = ["!", "@", "#",];
-let lowercase = ["a", "b", "c",];
-let uppercase = ["A", "B", "C",];
+let numeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",];
+let special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", ":", ";", "'", "", "<", ",", ">", ".", "?", "/", "|", "{", "}", "[",
+"]", "<", ">",];
+let lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+let uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 // Evaluate function
 if (includeSpecial) {
@@ -31,7 +32,8 @@ if (includeLowercase) {
   characterOptions = characterOptions.concat(lowercase);
 }
 
-let res 
+// No variable added
+let res = "";
 
   console.log(passwordLength);
 
@@ -60,8 +62,10 @@ function writePassword() {
     includeUppercase
     );
   
+  // Password text variable
     var passwordText = document.querySelector("#password");
   
+  // Add password text to generate password
     passwordText.value = password;
   
   }
